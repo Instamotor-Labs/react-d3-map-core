@@ -1,10 +1,7 @@
 "use strict";
 
-import {
-  default as React,
-  Component,
-  PropTypes
-} from 'react';
+import { default as React, Component } from 'react';
+import PropTypes from 'prop-types';
 
 import d3 from 'd3';
 
