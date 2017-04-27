@@ -19,9 +19,7 @@ import {
   isTooltipUpdate
 } from './utils/tooltipUpdate';
 
-import {
-  default as ReactCSSTransitionGroup
-} from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 export default class VectorTile extends Component {
   constructor(props) {

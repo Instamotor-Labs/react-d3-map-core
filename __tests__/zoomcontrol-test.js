@@ -4,7 +4,7 @@ import {
 
 import {
   default as TestUtils
-} from 'react-addons-test-utils';
+} from 'react-dom/test-utils';
 
 const expect = require('expect');
 const ZoomControl = require('../lib/zoomControl');
