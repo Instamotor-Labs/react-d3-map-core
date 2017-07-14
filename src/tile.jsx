@@ -11,7 +11,7 @@ import {
   isTooltipUpdate
 } from './utils/tooltipUpdate';
 
-import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default class Tile extends Component {
   constructor(props) {
@@ -68,17 +68,18 @@ export default class Tile extends Component {
       }
 
       return (
-        <image
-          className= {tileClass + ' tile'}
-          key= {t.join('-')}
-          id= {id}
-          xlinkHref= {xlink}
-          width= {1}
-          height= {1}
-          x= {t[0]}
-          y= {t[1]}
-          onLoad= {onLoad}
-        ></image>
+        <CSSTransition key={t.join('-')} classNames="tiles" timeout={100}>
+          <image
+            className= {tileClass + ' tile'}
+            id= {id}
+            xlinkHref= {xlink}
+            width= {1}
+            height= {1}
+            x= {t[0]}
+            y= {t[1]}
+            onLoad= {onLoad}
+          ></image>
+        </CSSTransition>
       )
     })
 
@@ -87,7 +88,7 @@ export default class Tile extends Component {
       <g
         transform={transform}
       >
-        <ReactCSSTransitionGroup component='g' transitionName="tiles" transitionEnterTimeout={100} transitionLeaveTimeout={100}>
+        <ReactCSSTransitionGroup component='g'>
           {tilesGroup}
         </ReactCSSTransitionGroup>
       </g>

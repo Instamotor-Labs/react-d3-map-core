@@ -118,11 +118,11 @@ Or you could simply clone the code in `react-d3-map.css`.
   transition: opacity 500ms ease-in;
 }
 
-.tiles-leave {
+.tiles-exit {
   opacity: 1;
 }
 
-.tiles-leave.tiles-leave-active {
+.tiles-exit.tiles-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
