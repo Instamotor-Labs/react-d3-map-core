@@ -1,5 +1,5 @@
 {
-  "name": "react-d3-map-core",
+  "name": "@instamotor-labs/react-d3-map-core",
   "version": "0.13.7",
   "description": "react-d3 map core component",
   "main": "./lib/index.js",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "queue-async": "^1.0.7",
-    "react-faux-dom": "^3.0.1"
+    "react-faux-dom": "^4.1.0"
   },
   "jest": {
     "scriptPreprocessor": "./node_modules/babel-jest",
